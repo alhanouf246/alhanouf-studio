@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alhanouf Studio | AI-Assisted Creative Art & Portrait Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Alhanouf Studio</h1>
+      <p class="tagline">Digital Illustration, Stylized Character Portraits & AI Color Palette Exploration</p>
+      <div class="audience-badge">Audience: Independent Digital Illustrators & Commission Clients</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Filter Section (Working Feature 1) -->
+    <section class="controls-section">
+      <div class="search-box">
+        <label for="searchInput">Search Artworks:</label>
+        <input type="text" id="searchInput" placeholder="Search by title, medium, or tags..." aria-label="Search artworks">
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Filter Category:</span>
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="sketch">Sketches</button>
+        <button class="filter-btn" data-category="portrait">Portraits</button>
+        <button class="filter-btn" data-category="generated">AI-Assisted Colorway</button>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+      <h2>Curated Portfolio Works</h2>
+      <div id="artGrid" class="art-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+      <div id="emptyMessage" class="empty-message hidden">No artwork matching the selected filter or search term.</div>
+    </section>
+
+    <!-- Interactive AI Palette Generator Tool (Working Feature 2 & PR Improvement) -->
+    <section class="tool-section">
+      <div class="tool-card">
+        <h2>Interactive Studio Feature: AI Palette Inspector & Harmony Generator</h2>
+        <p>Select an artistic mood to instantly generate dynamic complementary swatches for stylized character sketching.</p>
+        <div class="palette-controls">
+          <label for="moodSelect">Select Portrait Mood / Aesthetic:</label>
+          <select id="moodSelect">
+            <option value="warm">Warm Dusk (Cinematic Orange & Carmine)</option>
+            <option value="cool">Cyberpunk Twilight (Electric Cyan & Violet)</option>
+            <option value="earth">Earthy Olive (Forest Greens & Soft Umber)</option>
+            <option value="monochrome">Graphite Classic (High-Contrast Charcoal & Slate)</option>
+          </select>
+          <button id="generatePaletteBtn" class="btn-primary">Generate Harmony</button>
+        </div>
+        <div id="paletteDisplay" class="palette-swatches">
+          <!-- Swatches dynamically injected -->
+        </div>
+        <div id="paletteFeedback" class="palette-notes">Click 'Generate Harmony' to view HEX codes and contrast values.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Detailed Project View (Working Feature 3) -->
+  <div id="artModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      <div class="modal-body">
+        <div id="modalVisual" class="modal-visual"></div>
+        <div class="modal-info">
+          <div id="modalBadge" class="card-badge"></div>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <div class="modal-meta">
+            <div><strong>Created:</strong> <span id="modalDate"></span></div>
+            <div><strong>Medium / Tools:</strong> <span id="modalTools"></span></div>
+            <div><strong>AI Disclosure:</strong> <span id="modalAiStatus"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>AI 101 Midterm Prototype &copy; 2026 Alhanouf Turki Gazzaz · Alvernia University</p>
+      <p class="disclosure">Project disclosure: Synthetic demo media and palette generator are labeled transparently for academic evaluation.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

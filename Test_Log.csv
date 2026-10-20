@@ -1,0 +1,7 @@
+Test ID,Category,Test Action / Input,Expected Result,Actual Result,Status,Evidence & Notes
+TC-01,Filter,Click category button 'sketch',Gallery displays only 2 sketch items with sketch badges,Only 'Anatomy Study' and 'Mechanical Wing' rendered,PASS,Verified DOM card count equals 2
+TC-02,Filter,Click category button 'portrait',Gallery displays 2 character portraits,Only 'Nocturne Wanderer' and 'Ethereal Gaze' rendered,PASS,Verified category state set to 'portrait'
+TC-03,Search,Type 'cyberpunk' in live search input,Filters gallery to show only cyberpunk tagged item,1 card displayed ('Cyber-Glow Palette Variant'),PASS,Verified substring matching across tag array
+TC-04,Edge Case,Type 'xyznonexistentterm' in search,Empty state message appears, emptyMessage unhidden,'No artwork matching the selected filter...' displayed,PASS,Boundary check: 0 cards rendered; empty state shown
+TC-05,Modal,Press Enter key on focused art card,Accessible modal dialog opens with full metadata,Modal opened; shows tools and strict AI disclosure,PASS,Aria-modal active; Esc key cleanly closes dialog
+TC-06,Tool/PR,Select 'Cool/Cyberpunk' & click Generate,4 color swatches inject with valid HEX values,4 swatches rendered (#06b6d4 #8b5cf6 #1e1b4b #a7f3d0),PASS,Verified HEX string format and contrast readability
